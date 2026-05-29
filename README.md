@@ -1,17 +1,17 @@
-# research-paper-summarizer-api
-AI-powered research paper summarizer and Q&amp;A API built with FastAPI, PostgreSQL + pgvector, Docker, and Google Gemini. Upload PDFs, generate structured summaries, and ask questions using semantic search + RAG.
+# Research Paper Summarizer API
+
+AI-powered research paper summarizer and Q&A API built with FastAPI, PostgreSQL + pgvector, Docker, and Google Gemini.
 
 ## Features
 
-- Upload research papers in PDF format
-- Extract and store paper text
-- Generate structured summaries using Google Gemini
-- Ask questions about uploaded papers
-- Semantic search with PostgreSQL + pgvector
-- Question/answer history
-- Dockerized for local development
+- Upload research paper PDFs
+- Extract paper text
+- Generate structured summaries
+- Ask questions using semantic retrieval
+- Store Q&A history
+- Docker support
 
-- ## Tech Stack
+## Tech Stack
 
 - FastAPI
 - PostgreSQL
@@ -19,4 +19,13 @@ AI-powered research paper summarizer and Q&amp;A API built with FastAPI, Postgre
 - SQLAlchemy
 - Google Gemini API
 - Docker
-- Python
+
+## Run locally
+
+pip install -r requirements.txt
+docker compose up -d
+uvicorn app.main:app --reload
+
+## API docs
+
+http://127.0.0.1:8000/docs
